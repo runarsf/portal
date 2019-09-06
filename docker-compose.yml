@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  startpage:
+    container_name: startpage
+    hostname: startpage
+    restart: unless-stopped
+    image: startpage
+    build:
+      context: .
+    environment:
+      - PORT
+    volumes:
+      - ./:/startpage:ro
+    ports:
+      - 4180:4180
