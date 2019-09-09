@@ -25,8 +25,7 @@ This is an example for the domain `https://start.runarsf.dev`
             location / {
                 proxy_pass       http://localhost:4180;
                 proxy_set_header Host      $host;
-                proxy_set_header X-Real-IP $remote_addr;
-                      
+                proxy_set_header X-Real-IP $remote_addr;             
     }
     ```
 3. Check config and restart Nginx
@@ -39,17 +38,17 @@ This is an example for the domain `https://start.runarsf.dev`
 4. Add an SSL certificate managed by Certbot *[optional]*
     ```shell
     $ sudo certbot --nginx
-    [â€¦]
+    [??¦]
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     1: start.runarsf.dev
     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     Select the appropriate numbers separated by commas and/or spaces, or leave input
     blank to select all options shown (Enter 'c' to cancel): 1 # select the index of the domain name
-    [â€¦]
+    [??¦]
     Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 1 # select 1
-    [â€¦]
+    [??¦]
     Congratulations! You have successfully enabled <https://start.runarsf.dev>
     You should test your configuration at:
     <https://www.ssllabs.com/ssltest/analyze.html?d=start.runarsf.dev>
-    [â€¦]
+    [??¦]
     ```

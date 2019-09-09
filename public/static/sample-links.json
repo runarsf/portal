@@ -1,0 +1,37 @@
+{
+	"links": [
+    {
+      "category": "Sample category",
+      "url": "/static/sample-links.json",
+      "content": [
+        {
+          "title": "Sample link",
+          "url": "/static/sample-links.json"
+        },
+        {
+          "title": "Sample",
+          "url": "/static/sample-links.json",
+          "pipe": [
+            {
+              "title": "pipe",
+              "url": "/static/sample-links.json"
+            }
+          ]
+        },
+        {
+          "collapsible": "Sample dropdown",
+          "items": [
+            {
+              "title": "Sample dropdown item 1",
+              "url": "/static/sample-links.json"
+            },
+            {
+              "title": "Sample dropdown item 2",
+              "url": "/static/sample-links.json"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

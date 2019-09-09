@@ -162,7 +162,9 @@ var trigger = {
     },
     engine: function (query) {
         if (query.toLowerCase().startsWith('http') || !(query.includes(' ')) && query.includes('.')) {
-            window.open('https://' + query.replace('https://', '').replace('http://', ''));
+          window.open('https://' + query.replace('https://', '').replace('http://', ''), (cookies.get('setting-newtab') == 'true') ? '' : '_self');
+        } else if (query.toLowerCase().startsWith('r/')) {
+          window.open('https://reddit.com/'+query, (cookies.get('setting-newtab') == 'true') ? '' : '_self');
         } else {
           window.open(cookies.get('setting-engine') + query, (cookies.get('setting-newtab') == 'true') ? '' : '_self');
         }
@@ -244,7 +246,7 @@ var settings = {
     let s_object, s_cookie, type;
 
     this.autoinit('setting-engine', 'https://duckduckgo.com/?q=');
-    this.autoinit('setting-links', '');
+    this.autoinit('setting-links', '/static/sample-links.json');
     //this.autoinit('setting-links', window.location.href + 'static/links.json');
     this.autoinit('setting-newtab', 'false');
   }
