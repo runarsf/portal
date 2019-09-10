@@ -13,14 +13,6 @@
 					"url": "https://reddit.com/"
 				},
 				{
-					"title": "GitHub",
-					"url": "https://github.com/runarsf/"
-				},
-				{
-					"title": "GitLab",
-					"url": "https://gitlab.com/runarsf/"
-				},
-				{
 					"title": "Twitter",
 					"url": "https://twitter.com/"
 				},
@@ -48,23 +40,6 @@
 						{
 							"title": "EØS",
 							"url": "https://en.wikipedia.org/wiki/Feces"
-						}
-					]
-				},
-				{
-					"collapsible": "Floof",
-					"items": [
-						{
-							"title": "Home",
-							"url": "https://floof.runarsf.dev"
-						},
-						{
-							"title": "Fox",
-							"url": "https://floof.runarsf.dev/albums/fox"
-						},
-						{
-							"title": "Upload",
-							"url": "https://floof.runarsf.dev/upload"
 						}
 					]
 				}
@@ -108,6 +83,41 @@
 						{
 							"title": "Warframe",
 							"url": "steam://run/230410"
+						}
+					]
+				}
+			]
+		},
+		{
+			"category": "dev",
+			"url": "https://github.com/",
+			"content": [
+				{
+					"title": "GitHub",
+					"url": "https://github.com/runarsf/"
+				},
+				{
+					"title": "GitLab",
+					"url": "https://gitlab.com/runarsf/"
+				},
+				{
+					"title": "Netlify",
+					"url": "https://app.netlify.com/teams/runarsf/sites"
+				},
+				{
+					"collapsible": "Floof",
+					"items": [
+						{
+							"title": "Home",
+							"url": "https://floof.runarsf.dev"
+						},
+						{
+							"title": "Fox",
+							"url": "https://floof.runarsf.dev/albums/fox"
+						},
+						{
+							"title": "Upload",
+							"url": "https://floof.runarsf.dev/upload"
 						}
 					]
 				}
