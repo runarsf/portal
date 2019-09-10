@@ -9,7 +9,6 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "netlify-lambda build express",
     "dev": "npx supervisor index.js",
     "start": "node index.js"
   },
