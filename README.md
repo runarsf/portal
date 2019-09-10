@@ -1,5 +1,7 @@
 # Start
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8acfe33e-7f46-4331-9fd1-4d81bc04ef24/deploy-status)](https://app.netlify.com/sites/thirsty-clarke-fbe305/deploys)
+
 ### Custom self-hosted JSON file with Nginx and CORS
 Add this to your Nginx server block and reload nginx (see [Self-hosting](https://github.com/runarsf/start#Self-hosting))
   ```nginx
