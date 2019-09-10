@@ -1,4 +1,4 @@
-# Start
+# Start (`netlify` - node-less netlify branch)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/8acfe33e-7f46-4331-9fd1-4d81bc04ef24/deploy-status)](https://app.netlify.com/sites/thirsty-clarke-fbe305/deploys)
 
@@ -10,7 +10,7 @@ Add this to your Nginx server block and reload nginx (see [Self-hosting](https:/
   }
   ```
 
-### Self-hosting
+### Self-hosting (`master` branch)
 1. Set up the repo
     ```shell
     $ git clone https://github.com/runarsf/start.git
@@ -27,7 +27,7 @@ This is an example for the domain `https://start.runarsf.dev`
             location / {
                 proxy_pass       http://localhost:4180;
                 proxy_set_header Host      $host;
-                proxy_set_header X-Real-IP $remote_addr;             
+                proxy_set_header X-Real-IP $remote_addr;
     }
     ```
 3. Check config and restart Nginx
