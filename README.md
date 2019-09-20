@@ -4,8 +4,8 @@
 
 #### Custom link file
 The link file URL option accepts a relative path (for [self-hosting](https://github.com/runarsf/start#self-hosting)) and URLs.
-Default (relative): `/static/sample-links.json`
-URL Example: `https://start.runarsf.dev/static/sample-links.json`
+<br/>Default (relative): `/static/sample-links.json`
+<br/>URL Example: `https://start.runarsf.dev/static/sample-links.json`
 
 #### Scale
 Scale modifies the size of the main container. `1 = width: 20%`, `2 = width: 40%`, etc.
@@ -14,7 +14,7 @@ If you accidentally set the scale to something that messes up the UI, use any of
   * Auto-fix (search box): `fix-scale`
   * To manually set the scale setting (js console): `cookies.set('setting-scale', '1');`
   * To reset all settings to their defaults (js console): `cookies.clear();`
-Default: `2`
+<br/>Default: `2`
 
 #### Link search
 Typing something in the search box will look for the entered text in all links and hide the links and boxes that don't match. Hitting <kbd>Enter</kbd> will search using the defined [search engine](https://github.com/runarsf/start#search-engines).
@@ -27,7 +27,7 @@ To use the search function, type something in the search box and click <kbd>Ente
 This will append the user input to the "Search engine" option and open it (either redirect or new tab, based on the "Open links in new tab" option).
 If the input starts with 'http' or contains a period and no space, it will treat the input as a URL and open it directly using https.
 If the input starts with 'r/', it will treat the following text as a subreddit and open it.
-Default: `https://google.com/#q=`
+<br/>Default: `https://google.com/#q=`
 
 #### links.json format
 To see a sample configuration, open [/public/static/sample-links.json](https://github.com/runarsf/start/blob/master/public/static/sample-links.json)
