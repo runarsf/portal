@@ -97,6 +97,10 @@
 					"url": "https://github.com/runarsf/"
 				},
 				{
+					"title": "Notion",
+					"url": "https://www.notion.so/"
+				},
+				{
 					"title": "GitLab",
 					"url": "https://gitlab.com/runarsf/"
 				},
@@ -120,6 +124,14 @@
 							"url": "https://floof.runarsf.dev/upload"
 						}
 					]
+				},
+				{
+					"title": ".gitignore",
+					"url": "https://www.gitignore.io/"
+				},
+				{
+					"title": "changelog",
+					"url": "https://keepachangelog.com/en/1.0.0/"
 				}
 			]
 		}

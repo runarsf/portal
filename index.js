@@ -1,11 +1,13 @@
 const express = require('express');
-var path = require('path');
+const cors = require('cors');
+const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config();
 const app = express();
 const port = process.env.PORT || 4180;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
+   .use(cors());
 
 
 app.get('/', function (req, res) {
