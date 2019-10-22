@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang='en'>
-<head>
-  <meta http-equiv='content-type' content='text/html' charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <head>
+    <meta http-equiv='content-type' content='text/html' charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
-  <link href='https://fonts.googleapis.com/css?family=Muli|Ubuntu' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Muli|Ubuntu' rel='stylesheet'>
 
-  <!-- <script src='/static/links.json' type='application/json'></script> -->
-  <script src='static/jquery.min.js' charset='utf-8' type='text/javascript'></script>
-  <script src='static/index.js' charset='utf-8' type='text/javascript'></script>
-  <link href='static/index.css' rel='stylesheet' />
-  <link rel='shortcut icon' type='image/png' href="/static/favicon.ico" />
+    <!-- <script src='/static/links.json' type='application/json'></script> -->
+    <script src='static/jquery.min.js' charset='utf-8' type='text/javascript'></script>
+    <script src='static/script.js' charset='utf-8' type='text/javascript'></script>
+    <link href='static/style.css' rel='stylesheet' />
+    <link rel='shortcut icon' type='image/png' href="/static/favicon.ico" />
 
-  <title>~</title>
-</head>
+    <title>Start</title>
+  </head>
 
-<body onload='time.start()'>
+  <body onload='time.start()'>
 
-  <main id='module'>
-    <div id='toolbar'>
-      <span id='left'>
-        <p id='time'></p>
-      </span>
+    <main id='module'>
+      <div id='toolbar'>
+        <span id='left'>
+          <p id='time'></p>
+        </span>
 
-      <span id='center'><p id='quick-result'></p></span>
+        <span id='center'><p id='quick-result'></p></span>
 
-      <span id='right'>
-        <p id='mailto' onclick='compose();'></p>
-        <span id='cog' onclick='$("#list-settings").toggle();'>&#9881;</span>
-      </span>
-    </div>
+        <span id='right'>
+          <p id='mailto' onclick='compose();'></p>
+          <span id='cog' onclick='$("#list-settings, .add-link").toggle(); $()'>&#9881;</span>
+        </span>
+      </div>
 
-    <div id='search-area'>
-      <kbd id='search-prefix'  contentEditable='true'>»</kbd>
-      <input id='search-input' type='text' placeholder='search' autofocus='autofocus' />
-      <!-- onkeypress='return search(event)'' -->
-    </div>
+      <div id='search-area'>
+        <kbd id='search-prefix'  contentEditable='true'>»</kbd>
+        <input id='search-input' type='text' placeholder='search' autofocus='autofocus' />
+        <!-- onkeypress='return search(event)'' -->
+      </div>
 
-    <div id='box-area'>
-      <ol id='mailbox'>
-        <a href='javascript:void(0);' class='list-header'>Compose E-mail</a>
-        <input id='mail-subject' type='text' placeholder='subject' />
-        <textarea name='mail-body' placeholder='mail body' id='mail-body'></textarea>
-      </ol>
-      <ol id='list-settings'>
-        <a href='javascript:void(0);' class='list-header'>Settings</a>
-        <!-- <a href='javascript:void(0);'>Option 1</a> -->
-        <li class='list-item'>
-          <input class='setting' id='setting-engine' type='text' placeholder='' autofocus='autofocus' /> <span>Search engine</span>
-        </li>
-        <li class='list-item'>
-          <input class='setting' id='setting-links' type='text' placeholder='' autofocus='autofocus' /> <span>Link file URL (json)</span>
-        </li>
-        <li class='list-item'>
-          <input class='setting' id='setting-scale' type='text' placeholder='' autofocus='autofocus' /> <span>Scale</span>
-        </li>
-        <li class='list-item'>
-          <input class='setting' id='setting-newtab' type='checkbox' autofocus='autofocus' /> <span>Open links in new tab</span>
-        </li>
-        <li class='list-item'>
-          <button type='button' onclick='settings.apply();'>Apply</button>
-          <button type='button' onclick='cookies.clear();'>Clear Cookies</button>
-          <button type='button' onclick='window.location.reload(true);'>Hard Reload</button>
-        </li>
-      </ol>
-    </div>
-  </main>
+      <div id='box-area'>
+        <ol id='mailbox'>
+          <div class='list-header-placeholder'>
+            <a href='javascript:void(0);' class='list-header'>Compose E-mail</a>
+          </div>
+          <input id='mail-subject' type='text' placeholder='subject' />
+          <textarea name='mail-body' placeholder='mail body' id='mail-body'></textarea>
+        </ol>
+        <ol id='list-settings'>
+          <div class='list-header-placeholder'><a href='javascript:void(0);' class='list-header'>Settings</a></div>
+          <!-- <a href='javascript:void(0);'>Option 1</a> -->
+          <li class='list-item'>
+            <input class='setting' id='setting-engine' type='text' placeholder='' autofocus='autofocus' /> <span>Search engine</span>
+          </li>
+          <li class='list-item'>
+            <input class='setting' id='setting-links' type='text' placeholder='' autofocus='autofocus' /> <span>Link file URL (json)</span>
+          </li>
+          <li class='list-item'>
+            <input class='setting' id='setting-scale' type='text' placeholder='' autofocus='autofocus' /> <span>Scale</span>
+          </li>
+          <li class='list-item'>
+            <input class='setting' id='setting-newtab' type='checkbox' autofocus='autofocus' /> <span>Open links in new tab</span>
+          </li>
+          <li class='list-item'>
+            <button type='button' onclick='settings.apply();'>Apply</button>
+            <button type='button' onclick='cookies.clear();'>Clear Cookies</button>
+            <button type='button' onclick='window.location.reload(true);'>Hard Reload</button>
+          </li>
+        </ol>
+      </div>
+    </main>
 
-</body>
+  </body>
 </html>

@@ -6,10 +6,6 @@ $(document).ready(function () {
   $('#search-input').keyup(function () { trigger.search() });
 });
 
-
-/**
-* Load links from JSON file
-*/
 let catergoryClass;
 function loadLinks() {
 
@@ -22,7 +18,7 @@ function loadLinks() {
 
         catergoryClass = link.category.replace(/\//g, '_').replace(/\s+/g, '_');
         if (!(link.url)) link.url = "javascript: void(0);' style='cursor:var(--cursor);" // if an url isn't set, style the cursor and remove click events
-        $('#box-area').append(`<ol class='${catergoryClass} list-area'><a href='${link.url}' class='list-header'>${link.category}</a></ol>`);
+        $('#box-area').append(`<ol class='${catergoryClass} list-area'><div class='list-header-placeholder'><a href='${link.url}' class='list-header'>${link.category}</a><a class='list-header add-link' onclick='addLink("${catergoryClass}", "${linkTarget}");'>+</a></div></ol>`);
 
         $.each(link.content, function (i, cont) {
           if (cont.script) { // is script defined in content
@@ -52,9 +48,17 @@ function loadLinks() {
   });
 }
 
-/**
- * Clock
- */
+function addLink (category, target) {
+  $('.' + category).append(`<li class='list-item'><a href='${window.prompt("URL", "https://google.com/")}' target='${target}'>${window.prompt("Title", "Google")}</a></li>`);
+}
+
+function scale () {
+  let scale = cookies.get('setting-scale');
+  let module = document.getElementById('module');
+  module.style.width = scale * 20 + '%';
+  module.style.top = 30 / scale + '%';
+}
+
 var time = {
   start: function () {
     var today = new Date();
@@ -72,9 +76,6 @@ var time = {
   }
 }
 
-/**
- * Email
- */
 function compose() {
   var input = document.getElementById('search-input').value;
   var mailSubject = document.getElementById('mail-subject').value;
@@ -157,10 +158,10 @@ var trigger = {
     if (query.toLowerCase() === 'e') returns = Math.E;
     if (query.toLowerCase() === 'pi') returns = Math.PI;
     if (query.toLowerCase() === 'fix-scale') {
-	  document.getElementById('search-input').value = '';
-	  cookies.set('setting-scale', '1');
-	  window.location.reload(false);
-	}
+    document.getElementById('search-input').value = '';
+    cookies.set('setting-scale', '1');
+    window.location.reload(false);
+  }
 
     try { evaluation = eval(query); } catch (e) { evaluation = ''; }
     if (typeof evaluation !== 'undefined' && evaluation) returns = evaluation;
@@ -175,13 +176,6 @@ var trigger = {
       window.open(cookies.get('setting-engine') + query, (cookies.get('setting-newtab') == 'true') ? '' : '_self');
     }
   }
-}
-
-function scale () {
-  let scale = cookies.get('setting-scale');
-  let module = document.getElementById('module');
-  module.style.width = scale*20+'%';
-  module.style.top = 30/scale+'%';
 }
 
 var cookies = {
