@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  portal-api:
-    image: portal-api
-    hostname: portal-api
-    container_name: portal-api
+  portal-backend:
+    image: portal-backend
+    hostname: portal-backend
+    container_name: portal-backend
     build: ./backend
     ports:
       - 5000:5000
