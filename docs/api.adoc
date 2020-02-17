@@ -7,8 +7,6 @@ Authentication is done with with either `username:password` or `token:x`.
 
 === Routes
 
-==== Healthcheck
-
 |==============
 |URL          |*/api/health*
 |Description
@@ -32,10 +30,8 @@ Date: Thu, 13 Feb 2020 10:25:37 GMT
 -----------------
 |==============
 
-==== Register user
-
 |==============
-|URL          |*/api/users*
+|URL          |*/api/users/register*
 |Description
 a|Register a new user.
  +
@@ -60,7 +56,7 @@ a|
 -----------------
 HTTP/1.0 201 CREATED
 Content-Type: application/json
-Location: http://127.0.0.1:5000/api/users/1
+Location: http://127.0.0.1:5000/api/user/1
 Content-Length: 26
 Server: Werkzeug/0.12.2 Python/3.8.1
 Date: Thu, 13 Feb 2020 09:45:28 GMT
@@ -71,7 +67,28 @@ Date: Thu, 13 Feb 2020 09:45:28 GMT
 -----------------
 |==============
 
-==== User id
+|==============
+|URL          |*/api/users/forgot*
+|Description  |Change a user's password.
+|Method       |POST
+|Requires Auth|True
+|curl         |`curl -u uname:pword -i -X POST -H "Content-Type: application/json" -d '{"new_password": "newpword"}' http://127.0.0.1:5000/api/forgot`
+|Response Body
+a|
+[source,sh]
+-----------------
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 168
+Server: Werkzeug/1.0.0 Python/3.8.1
+Date: Thu, 13 Feb 2020 18:48:59 GMT
+
+{
+  "new password": "reed",
+  "password": "$6$rounds=656000$/g7z/YcKDhdNdL7B$/l4n6Eb5B4ckzoCKZA3wsbcaaPCo5X9GAY7sN3uWOjZMpyra8.PjqLMDXZ6C7qwkMCGRsIKgLidYdGltWMFX0/"
+}
+-----------------
+|==============
 
 |==============
 |URL          |*/api/users/`<int:id>`*
@@ -99,8 +116,6 @@ Date: Thu, 13 Feb 2020 10:07:54 GMT
 }
 -----------------
 |==============
-
-==== User token
 
 |==============
 |URL          |*/api/token*
@@ -131,8 +146,6 @@ Date: Thu, 13 Feb 2020 10:13:29 GMT
 }
 -----------------
 |==============
-
-==== Resource
 
 |==============
 |URL          |*/api/resource*

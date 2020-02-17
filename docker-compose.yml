@@ -5,6 +5,7 @@ services:
     image: portal-backend
     hostname: portal-backend
     container_name: portal-backend
+    env_file: ./backend/.env
     build: ./backend
     ports:
       - 5000:5000
