@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Ubuntu" rel="stylesheet">
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel=stylesheet type=text/css href="style.css">
+    <title>Portal</title>
+  </head>
+
+  <body>
+    <div id='app'>
+      <header>
+        <h2>Portal</h2>
+        <h2>{{ this.time }}</h2>
+      </header>
+      <main>
+        <ul class='category' :label='category.title' v-for='category in this.categories'>
+          <li class='item' v-for='link in category.links'>
+            <a v-show='link.url' :href='link.url'>{{ link.title }}</a>
+            <details class='accordion' v-show='link.accordion'>
+              <summary class='title'>{{ link.title }}</summary>
+              <ul><li class='item' v-for='accord in link.accordion'>
+                <a :href='accord.url'>{{ accord.title }}</a>
+              </li></ul>
+            </details>
+            <span v-show='link.pipes' v-for='pipe in link.pipes'>
+              <span class='separator'> | </span><a :href='pipe.url'>{{ pipe.title }}</a>
+            </span>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <script src="app.js"></script> <!-- Has to be loaded last. -->
+  </body>
+</html>

@@ -1,14 +1,12 @@
 version: '3'
 
 services:
-  portal-backend:
-    image: portal-backend
-    hostname: portal-backend
-    container_name: portal-backend
-    env_file: ./backend/.env
-    build: ./backend
+  portal:
+    image: nginx:latest
+    hostname: portal
+    container_name: portal
     ports:
-      - 5000:5000
+      - ${PORT:-80}:80
     volumes:
-      - ./backend:/app
+      - ./src:/usr/share/nginx/html:ro
     restart: unless-stopped

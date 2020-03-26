@@ -1,0 +1,39 @@
+[
+  { "title": "General",
+    "links": [
+      { "title": "Google",        "url": "https://google.com"        },
+      { "title": "DuckDuckGo",    "url": "https://duckduckgo.com"    },
+      { "title": "GitHub",        "url": "https://github.com",
+        "pipes": [
+          { "title": "GitLab",    "url": "https://gitlab.com"        },
+          { "title": "GitKraken", "url": "https://www.gitkraken.com" }
+      ]},
+      { "title": "Stuff",
+        "accordion": [
+          { "title": "A", "url": "javascript:void(0);"       },
+          { "title": "B", "url": "javascript:void(0);"       }
+      ]}
+  ]},
+  { "title": "Social",
+    "links": [
+      { "title": "Reddit",   "url": "https://reddit.com"   },
+      { "title": "Subreddits",
+        "accordion": [
+          { "title": "r/desktops",             "url": "https://reddit.com/r/desktops" },
+          { "title": "r/firefoxcss",           "url": "https://reddit.com/r/firefoxcss" },
+          { "title": "r/startpages",           "url": "https://reddit.com/r/startpages" },
+          { "title": "r/sysadmin",             "url": "https://reddit.com/r/sysadmin" },
+          { "title": "r/netsec",               "url": "https://reddit.com/r/netsec" },
+          { "title": "r/norge",                "url": "https://reddit.com/r/norge" },
+          { "title": "r/mechanicalkeyboards",  "url": "https://reddit.com/r/mechanicalkeyboards" },
+          { "title": "r/linux",                "url": "https://reddit.com/r/linux" },
+          { "title": "r/powershell",           "url": "https://reddit.com/r/powershell" },
+          { "title": "r/privacy",              "url": "https://reddit.com/r/privacy" },
+          { "title": "r/selfhosted",           "url": "https://reddit.com/r/selfhosted" },
+          { "title": "r/talesfromtechsupport", "url": "https://reddit.com/r/talesfromtechsupport" }
+      ]},
+      { "title": "YouTube",  "url": "https://youtube.com"  },
+      { "title": "Twitter",  "url": "https://twitter.com"  },
+      { "title": "Facebook", "url": "https://facebook.com" }
+  ]}
+]
